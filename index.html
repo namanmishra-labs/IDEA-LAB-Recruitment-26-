@@ -194,7 +194,7 @@
                 margin-left: auto;
                 margin-right: 5%;
             }
-        
+        }
             nav.docked > div {
                 min-height: 5rem;
             }
@@ -212,7 +212,6 @@
             nav.docked [aria-label="Toggle Theme"] {
                 order: -1;
             }
-        }
             /* Dark-mode overrides for page surfaces and readable text */
             html.dark body {
                 background-color: #111827;
@@ -327,7 +326,7 @@
 <!-- Secondary NavBar (IDEA Lab) -->
 <!-- IDEA Lab navigation: page sections, Events, and theme control -->
 <nav class="docked full-width top-0 sticky shadow-sm bg-surface-container-lowest/90 z-40 border-b border-surface-variant backdrop-blur-md">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-[95%] mx-auto h-16"><a class="flex items-center gap-2 group" href="#"><img alt="AKGEC IDEA Lab Logo" class="w-auto object-contain h-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"></a><div class="hidden md:flex items-center gap-8"><a class="font-label-caps text-[11px] uppercase text-primary border-b-2 border-primary pb-1 Active: opacity-80 transition-all duration-200 font-bold" href="#">Home</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#about">About US</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#vision">OUR Vision</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#activities">SERVICES</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#gallery">Gallery</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#contact">Contact</a></div><div class="hidden md:flex items-center gap-4 ml-auto"><a class="bg-primary text-on-primary font-label-caps text-[11px] uppercase px-5 py-2 rounded-full hover:bg-primary-container transition-colors shadow-sm" href="#explore">EVENTS</a><button aria-label="Toggle Theme" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-sm border border-surface-variant"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button></div></div>
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-[95%] mx-auto h-16"><a class="flex items-center gap-2 group" href="#"><img alt="AKGEC IDEA Lab Logo" class="w-auto object-contain h-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"></a><div class="hidden md:flex items-center gap-8"><a class="font-label-caps text-[11px] uppercase text-primary border-b-2 border-primary pb-1 Active: opacity-80 transition-all duration-200 font-bold" href="#">Home</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#about">About US</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#vision">OUR Vision</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#activities">SERVICES</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#gallery">Gallery</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#contact">Contact</a></div><div class="hidden md:flex items-center gap-4 ml-auto"><a class="bg-primary text-on-primary font-label-caps text-[11px] uppercase px-5 py-2 rounded-full hover:bg-primary-container transition-colors shadow-sm" href="#explore">EVENTS</a><button aria-label="Toggle Theme" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-sm border border-surface-variant"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button></div><button class="md:hidden text-on-surface p-2"><span class="material-symbols-outlined">menu</span></button></div>
 </nav>
 <!-- Hero Section -->
 <!-- Hero: introduction and primary IDEA Lab emblem -->
@@ -364,7 +363,7 @@
 </div>
 </div>
 <div class="relative flex min-h-[360px] items-center justify-center lg:min-h-[600px]">
-<img alt="AKGEC IDEA Lab innovation emblem" class="aspect-square w-[min(75vw,520px)] rounded-full object-cover shadow-2xl transition-transform duration-700 hover:scale-105" src="images/idea-lab-emblem.png">
+<img alt="AKGEC IDEA Lab innovation emblem" class="w-[min(75vw,520px)] h-auto object-contain shadow-2xl transition-transform duration-700 hover:scale-105" src="images/idealab logo.png">
 </div>
 </div>
 </header>
