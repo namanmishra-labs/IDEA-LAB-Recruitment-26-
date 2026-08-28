@@ -183,6 +183,42 @@
             filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.16));
         }
 
+        .innovation-hero-visual {
+            width: 100%;
+            min-height: 420px;
+            height: clamp(420px, 42vw, 620px);
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        #innovation-canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            touch-action: none;
+        }
+
+        .innovation-label {
+            position: absolute;
+            left: 50%;
+            bottom: 6%;
+            transform: translateX(-50%);
+            padding: 7px 13px;
+            border: 1px solid rgba(112, 0, 28, .12);
+            border-radius: 999px;
+            background: rgba(255,255,255,.72);
+            color: #70001c;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .18em;
+            white-space: nowrap;
+            backdrop-filter: blur(8px);
+            pointer-events: none;
+        }
+
         /* --------------------------------
            PILLARS
         -------------------------------- */
@@ -378,6 +414,17 @@
 
             .hero-logo {
                 max-width: 320px;
+            }
+
+            .innovation-hero-visual {
+                min-height: 330px;
+                height: 78vw;
+            }
+
+            .innovation-label {
+                bottom: 4%;
+                font-size: 8px;
+                padding: 6px 10px;
             }
 
             .pillar-card {
@@ -1098,11 +1145,10 @@ footer#contact .footer-compact-container > .border-t {
 
             <div class="absolute w-[420px] h-[420px] rounded-full bg-primary-fixed opacity-20 blur-3xl"></div>
 
-            <img
-                src="images/idealab logo.png"
-                alt="AKGEC IDEA Lab"
-                class="hero-logo floating-logo w-[min(75vw,520px)] h-auto object-contain relative z-10"
-            >
+            <div class="innovation-hero-visual relative z-10" id="innovation-visual">
+                <canvas id="innovation-canvas" aria-label="Interactive 3D IDEA Lab innovation lightbulb"></canvas>
+                <div class="innovation-label">IDEA • INNOVATION • ENTREPRENEURSHIP</div>
+            </div>
 
         </div>
 
@@ -3071,5 +3117,6 @@ footer#contact .footer-compact-container > .border-t {
 
 
 
+<script type="module" src="innovation-core.js"></script>
 </body>
 </html>
