@@ -5,6 +5,9 @@ const canvas = document.getElementById("innovation-canvas");
 
 const prefersReducedMotion =
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isMobile = window.matchMedia("(max-width: 700px)").matches;
+const isLaptop = window.matchMedia("(max-width: 1200px)").matches;
+const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.75);
 
 const scene = new THREE.Scene();
 
@@ -18,7 +21,7 @@ const renderer = new THREE.WebGLRenderer({
   powerPreference: "high-performance"
 });
 
-renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+renderer.setPixelRatio(pixelRatio);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.15;
@@ -295,7 +298,7 @@ for (const item of orbitData) {
 
 /* ---------- Rising idea particles ---------- */
 
-const particleCount = 850;
+const particleCount = isMobile ? 280 : isLaptop ? 560 : 850;
 const positions = new Float32Array(particleCount * 3);
 const particleSizes = new Float32Array(particleCount);
 const particleColors = new Float32Array(particleCount * 3);
@@ -335,11 +338,12 @@ const particleMat = new THREE.ShaderMaterial({
   blending: THREE.AdditiveBlending,
   vertexColors: true,
   uniforms: {
-    uPixelRatio: { value: Math.min(window.devicePixelRatio || 1, 2) }
+    uPixelRatio: { value: pixelRatio }
   },
   vertexShader: `
     attribute float aSize;
     varying vec3 vColor;
+    uniform float uPixelRatio;
 
     void main() {
       vColor = color;
@@ -408,6 +412,7 @@ let targetX = 0;
 let targetY = 0;
 let currentX = 0;
 let currentY = 0;
+let isVisible = true;
 
 function setPointer(clientX, clientY) {
   const rect = root.getBoundingClientRect();
@@ -437,15 +442,22 @@ function resize() {
   camera.updateProjectionMatrix();
 
   renderer.setSize(width, height, false);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setPixelRatio(pixelRatio);
 
-  particleMat.uniforms.uPixelRatio.value =
-    Math.min(window.devicePixelRatio || 1, 2);
+  particleMat.uniforms.uPixelRatio.value = pixelRatio;
 }
 
 const resizeObserver = new ResizeObserver(resize);
 resizeObserver.observe(root);
 resize();
+
+const visibilityObserver = new IntersectionObserver(
+  ([entry]) => {
+    isVisible = entry.isIntersecting;
+  },
+  { threshold: 0.05 }
+);
+visibilityObserver.observe(root);
 
 /* ---------- Animation ---------- */
 
@@ -453,6 +465,10 @@ const clock = new THREE.Clock();
 
 function animate() {
   requestAnimationFrame(animate);
+
+  if (!isVisible) {
+    return;
+  }
 
   const t = clock.getElapsedTime();
 
