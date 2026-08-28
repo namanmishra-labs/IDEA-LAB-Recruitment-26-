@@ -389,6 +389,43 @@
             border-color: #374151;
         }
 
+        html.dark .bg-surface,
+        html.dark .bg-surface-container-low,
+        html.dark .bg-surface-container-lowest,
+        html.dark .bg-surface-container,
+        html.dark .bg-surface-container-high {
+            background-color: #17212b !important;
+        }
+
+        html.dark .bg-white {
+            background-color: #202b36 !important;
+        }
+
+        html.dark .text-on-surface,
+        html.dark .text-on-surface-variant {
+            color: #f3f4f6 !important;
+        }
+
+        html.dark .border-surface-variant {
+            border-color: #3b4652 !important;
+        }
+
+        html.dark .hero-grid::before {
+            background: rgba(118, 0, 29, 0.28);
+        }
+
+        html.dark .hero-grid::after {
+            background: rgba(243, 184, 63, 0.1);
+        }
+
+        html.dark #themeToggle,
+        html.dark #themeToggleMobile,
+        html.dark #mobileMenuButton {
+            background-color: #2a3744;
+            color: #ffcf68;
+            border-color: #4b5966;
+        }
+
         /* --------------------------------
            ANIMATIONS
         -------------------------------- */
@@ -2993,6 +3030,8 @@ footer#contact .footer-compact-container > .border-t {
         if (!btn) return;
         btn.querySelector(".material-symbols-outlined").textContent = isDark ? "light_mode" : "dark_mode";
         btn.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+        btn.setAttribute("aria-pressed", String(isDark));
+        btn.title = isDark ? "Switch to light theme" : "Switch to dark theme";
     });
 }
     

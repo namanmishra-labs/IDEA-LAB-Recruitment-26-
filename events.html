@@ -112,6 +112,35 @@
             border-color: rgba(255, 255, 255, 0.15);
         }
 
+        html.dark .bg-surface,
+        html.dark .bg-surface-container-low,
+        html.dark .bg-surface-container-lowest,
+        html.dark .bg-surface-container,
+        html.dark .bg-surface-container-high {
+            background-color: #17212b !important;
+        }
+
+        html.dark .bg-white {
+            background-color: #202b36 !important;
+        }
+
+        html.dark .text-on-surface,
+        html.dark .text-on-surface-variant {
+            color: #f3f4f6 !important;
+        }
+
+        html.dark .border-surface-variant {
+            border-color: #3b4652 !important;
+        }
+
+        html.dark #themeToggle,
+        html.dark #themeToggleMobile,
+        html.dark #mobileMenuButton {
+            background-color: #2a3744;
+            color: #ffcf68;
+            border-color: #4b5966;
+        }
+
         #contact .footer-compact-container {
             padding-top: 34px;
             padding-bottom: 24px;
@@ -432,11 +461,14 @@
                 if (!button) return;
                 button.querySelector(".material-symbols-outlined").textContent = isDark ? "light_mode" : "dark_mode";
                 button.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+                button.setAttribute("aria-pressed", String(isDark));
+                button.title = isDark ? "Switch to light theme" : "Switch to dark theme";
             });
         }
 
         const savedTheme = localStorage.getItem("idea-lab-theme");
-        updateTheme(savedTheme === "dark");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        updateTheme(savedTheme ? savedTheme === "dark" : prefersDark);
 
         [themeToggle, themeToggleMobile].forEach(button => {
             if (!button) return;
