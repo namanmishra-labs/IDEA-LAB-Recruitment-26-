@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events | AKGEC IDEA Lab</title>
+    <title>Events & Opportunities | AKGEC IDEA Lab</title>
     <meta name="description" content="Explore innovation, entrepreneurship, incubation, and intellectual property events at AKGEC IDEA Lab.">
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -13,7 +13,6 @@
     <script>
         tailwind.config = {
             darkMode: "class",
-
             theme: {
                 extend: {
                     colors: {
@@ -66,183 +65,67 @@
             border-top: 3px solid #f3b83f;
         }
 
-        html.dark body {
-            background: #111827;
-            color: #f3f4f6;
+        /* Hide the default arrow in the summary tag for custom styling */
+        .custom-summary::-webkit-details-marker {
+            display: none;
         }
 
+        html.dark body { background: #111827; color: #f3f4f6; }
         html.dark .idea-nav,
-        html.dark .mobile-menu-panel {
-            background: #1f2937;
-            border-color: #374151;
-        }
-
-        html.dark .docked-logo {
-            filter: brightness(0) invert(1) opacity(.92);
-        }
-
-        html.dark .idea-nav a,
-        html.dark .mobile-menu-panel a {
-            color: #f3f4f6;
-        }
-
-        html.dark .global-nav {
-            background: #1f2937;
-            border-color: #374151;
-        }
-
-        html.dark .global-nav a {
-            color: #f3f4f6;
-        }
-
-        html.dark .light-surface {
-            background: #1f2937;
-            border-color: #374151;
-        }
-
-        html.dark button[id^="themeToggle"] {
-            background: #374151;
-            color: #ffb3b6;
-            border-color: #4b5563;
-        }
-
-        html.dark .events-surface {
-            background: #1f2937;
-            color: #f3f4f6;
-        }
-
-        html.dark .events-surface article {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.15);
-        }
-
+        html.dark .mobile-menu-panel { background: #1f2937; border-color: #374151; }
+        html.dark .docked-logo { filter: brightness(0) invert(1) opacity(.92); }
+        html.dark .idea-nav a:not(.text-primary),
+        html.dark .mobile-menu-panel a:not(.text-primary) { color: #f3f4f6; }
+        html.dark .global-nav { background: #1f2937; border-color: #374151; }
+        html.dark .global-nav a { color: #f3f4f6; }
+        html.dark .light-surface { background: #1f2937; border-color: #374151; }
+        html.dark button[id^="themeToggle"] { background: #374151; color: #ffb3b6; border-color: #4b5563; }
+        html.dark .events-surface { background: #111827; color: #f3f4f6; }
+        
         html.dark .bg-surface,
         html.dark .bg-surface-container-low,
         html.dark .bg-surface-container-lowest,
         html.dark .bg-surface-container,
-        html.dark .bg-surface-container-high {
-            background-color: #17212b !important;
-        }
-
-        html.dark .bg-white {
-            background-color: #202b36 !important;
-        }
-
+        html.dark .bg-surface-container-high { background-color: #17212b !important; }
+        html.dark .bg-white { background-color: #1f2937 !important; }
         html.dark .text-on-surface,
-        html.dark .text-on-surface-variant {
-            color: #f3f4f6 !important;
-        }
-
-        html.dark .border-surface-variant {
-            border-color: #3b4652 !important;
-        }
-
+        html.dark .text-on-surface-variant { color: #f3f4f6 !important; }
+        html.dark .border-surface-variant { border-color: #3b4652 !important; }
         html.dark #themeToggle,
         html.dark #themeToggleMobile,
-        html.dark #mobileMenuButton {
-            background-color: #2a3744;
-            color: #ffcf68;
-            border-color: #4b5966;
-        }
+        html.dark #mobileMenuButton { background-color: #2a3744; color: #ffcf68; border-color: #4b5966; }
 
-        #contact .footer-compact-container {
-            padding-top: 34px;
-            padding-bottom: 24px;
-        }
-
-        #contact .footer-compact-grid {
-            align-items: start;
-            column-gap: 42px;
-            row-gap: 20px;
-        }
-
-        #contact .footer-tagline {
-            max-width: 360px;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-
-        #contact .footer-compact-grid > div:not(:first-child) {
-            padding-top: 3px;
-        }
-
-        #contact .footer-compact-grid h3 {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.13em;
-            margin-bottom: 12px;
-        }
-
-        #contact .footer-compact-grid ul {
-            display: grid;
-            gap: 7px;
-            margin: 0;
-        }
-
-        #contact .footer-compact-grid ul a {
-            font-size: 16px;
-            line-height: 1.35;
-        }
-
-        #contact .footer-compact-container > .border-t {
-            margin-top: 24px;
-            padding-top: 12px;
-        }
+        #contact .footer-compact-container { padding-top: 34px; padding-bottom: 24px; }
+        #contact .footer-compact-grid { align-items: start; column-gap: 42px; row-gap: 20px; }
+        #contact .footer-tagline { max-width: 360px; font-weight: 600; letter-spacing: -0.02em; }
+        #contact .footer-compact-grid > div:not(:first-child) { padding-top: 3px; }
+        #contact .footer-compact-grid h3 { font-size: 11px; font-weight: 700; letter-spacing: 0.13em; margin-bottom: 12px; }
+        #contact .footer-compact-grid ul { display: grid; gap: 7px; margin: 0; }
+        #contact .footer-compact-grid ul a { font-size: 16px; line-height: 1.35; }
+        #contact .footer-compact-container > .border-t { margin-top: 24px; padding-top: 12px; }
 
         @media (max-width: 767px) {
             .docked { min-height: 72px; }
             .docked-logo { height: 72px; max-width: 175px; }
-
-            #contact .footer-compact-container {
-                padding-top: 26px;
-                padding-bottom: 20px;
-            }
-
-            #contact .footer-compact-grid {
-                column-gap: 0;
-                row-gap: 16px;
-            }
-
-            #contact .footer-tagline {
-                max-width: 100%;
-                font-size: 20px;
-            }
-
-            #contact .footer-compact-grid > div:not(:first-child) {
-                padding-top: 2px;
-            }
-
-            #contact .footer-compact-grid h3 {
-                margin-bottom: 8px;
-            }
-
-            #contact .footer-compact-grid ul {
-                gap: 5px;
-            }
-
-            #contact .footer-compact-grid ul a {
-                font-size: 15px;
-            }
-
-            #contact .footer-compact-container > .border-t {
-                margin-top: 18px;
-                padding-top: 10px;
-            }
+            #contact .footer-compact-container { padding-top: 26px; padding-bottom: 20px; }
+            #contact .footer-compact-grid { column-gap: 0; row-gap: 16px; }
+            #contact .footer-tagline { max-width: 100%; font-size: 20px; }
+            #contact .footer-compact-grid > div:not(:first-child) { padding-top: 2px; }
+            #contact .footer-compact-grid h3 { margin-bottom: 8px; }
+            #contact .footer-compact-grid ul { gap: 5px; }
+            #contact .footer-compact-grid ul a { font-size: 15px; }
+            #contact .footer-compact-container > .border-t { margin-top: 18px; padding-top: 10px; }
         }
     </style>
 </head>
 
 <body class="overflow-x-hidden">
+    <!-- AKGEC GLOBAL NAV -->
     <div class="hidden md:block bg-surface-container-lowest border-b border-surface-variant light-surface">
         <div class="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center h-16">
-                <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6syRMqqzKGFRhwcnGheAXP3eNBTHY0SxMpkEfzg_0UUMi99UatJsqOSJbftcPSooTRFgUbw_0A8mwuJjgoHUUny-oiTCrdSJ0R0lbifmvupgjNzE2bPFkaiIFQi3i4yzKFELJONhlHeTUu-72xJH2r-APxW043gQVTkgISzXdy4RQLjEsCF1ydSVi0j2_XUdt_X4p_9PSqxvavtpl1-Xl2uVMmgI3JrbO3V24qqzPYYsgBPJ3xPJY-GEjAEV93szwnWc"
-                    alt="Ajay Kumar Garg Engineering College"
-                    class="h-full w-auto object-contain"
-                >
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6syRMqqzKGFRhwcnGheAXP3eNBTHY0SxMpkEfzg_0UUMi99UatJsqOSJbftcPSooTRFgUbw_0A8mwuJjgoHUUny-oiTCrdSJ0R0lbifmvupgjNzE2bPFkaiIFQi3i4yzKFELJONhlHeTUu-72xJH2r-APxW043gQVTkgISzXdy4RQLjEsCF1ydSVi0j2_XUdt_X4p_9PSqxvavtpl1-Xl2uVMmgI3JrbO3V24qqzPYYsgBPJ3xPJY-GEjAEV93szwnWc" alt="Ajay Kumar Garg Engineering College" class="h-full w-auto object-contain">
             </div>
-
             <div class="flex items-center gap-6">
                 <div class="flex items-center gap-2 h-14">
                     <div class="h-full border border-surface-variant px-3 py-1 flex items-center justify-center bg-surface-container">
@@ -255,7 +138,6 @@
                         <span class="bg-tertiary-container text-white text-[10px] px-2 py-0.5 mt-1 font-bold rounded-sm w-full text-center">DIAMOND</span>
                     </div>
                 </div>
-
                 <div class="flex flex-col gap-2">
                     <a href="index.html#contact" class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition">❖ Apply Now for Admissions</a>
                     <a href="index.html#contact" class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition">❖ Registration Process for First Year</a>
@@ -283,27 +165,25 @@
         </div>
     </div>
 
+    <!-- IDEA LAB NAVIGATION -->
     <nav class="idea-nav docked sticky top-0 z-40 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm border-b border-surface-variant">
         <div class="max-w-[95%] mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center">
-            <a href="index.html#home" class="flex items-center">
-                <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"
-                    alt="AKGEC IDEA Lab Logo"
-                    class="docked-logo"
-                >
+            <a href="index.html" class="flex items-center">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI" alt="AKGEC IDEA Lab Logo" class="docked-logo">
             </a>
 
             <div class="hidden md:flex items-center gap-8">
-                <a href="index.html#home" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Home</a>
+                <a href="index.html" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Home</a>
                 <a href="index.html#about" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">About Us</a>
                 <a href="index.html#vision" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Our Vision</a>
                 <a href="index.html#services" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Services</a>
+                <!-- Event is highlighted actively here -->
+                <a href="events.html" class="nav-link font-bold text-[11px] uppercase text-primary border-b-2 border-primary pb-1">Events</a>
                 <a href="index.html#gallery" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Gallery</a>
-                <a href="index.html#contact" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Contact</a>
+                <a href="#contact" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Contact</a>
             </div>
 
             <div class="hidden md:flex items-center gap-3">
-                <a href="events.html" class="bg-primary text-white text-[11px] uppercase font-bold px-5 py-2.5 rounded-full hover:bg-primary-container transition shadow-sm">Events</a>
                 <button id="themeToggle" aria-label="Toggle Theme" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition border border-surface-variant">
                     <span class="material-symbols-outlined">dark_mode</span>
                 </button>
@@ -320,85 +200,163 @@
         </div>
 
         <div id="mobileMenu" class="mobile-menu-panel md:hidden border-t border-surface-variant bg-surface-container-lowest px-5 py-3">
-            <a href="index.html#home" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">Home</a>
+            <a href="index.html" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">Home</a>
             <a href="index.html#about" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">About Us</a>
             <a href="index.html#vision" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">Our Vision</a>
             <a href="index.html#services" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">Services</a>
+            <!-- Event is highlighted actively here -->
             <a href="events.html" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold text-primary">Events</a>
             <a href="index.html#gallery" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">Gallery</a>
-            <a href="index.html#contact" class="py-3 text-[11px] uppercase font-bold">Contact</a>
+            <a href="#contact" class="py-3 text-[11px] uppercase font-bold">Contact</a>
         </div>
     </nav>
 
-    <section class="bg-primary-container py-5 px-margin-mobile md:px-margin-desktop text-white">
-        <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex flex-col md:flex-row items-center gap-4">
-                <span class="bg-secondary-container text-black font-bold text-[11px] uppercase px-4 py-1.5 rounded-full">
-                    Upcoming Event
-                </span>
+    <!-- EVENTS HEADER -->
+    <header class="bg-[#17212b] text-white py-16 px-6 text-center border-b border-surface-variant dark:border-[#374151]">
+        <h1 class="font-heading text-4xl md:text-5xl font-bold mb-4">Events & Opportunities</h1>
+        <p class="text-white/70 max-w-2xl mx-auto text-lg mb-8">
+            Discover upcoming events, hackathons, workshops, startup activities, innovation challenges, and other opportunities at AKGEC IDEA Lab.
+        </p>
+        <a href="index.html" class="inline-flex items-center gap-2 border border-secondary-container text-secondary-container hover:bg-secondary-container hover:text-black font-bold text-[11px] uppercase tracking-wider px-6 py-3 rounded-full transition">
+            <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Home
+        </a>
+    </header>
 
-                <p class="font-semibold text-center md:text-left">
-                    INTERNAL SMART INDIA HACKATHON'26: Innovate for Sustainability
-                    <br>
-                    <span class="text-white/80">
-                        LAST DATE TO REGISTER: 03 SEPTEMBER
-                    </span>
-                </p>
-            </div>
-
-            <a
-                href="events.html"
-                class="bg-white text-primary font-bold text-[11px] uppercase px-6 py-2.5 rounded-full hover:bg-surface-bright transition"
-            >
-                Register Now
-            </a>
-        </div>
-    </section>
-
+    <!-- EVENTS MAIN CONTENT -->
     <main>
-        <section class="events-surface py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low text-on-surface">
+        <section class="events-surface py-20 px-margin-mobile md:px-margin-desktop bg-surface-container-low text-on-surface">
             <div class="max-w-container-max mx-auto">
-                <div class="max-w-3xl mb-16">
-                    <span class="text-primary text-[11px] uppercase tracking-[0.2em] font-bold">Innovation in Action</span>
-                    <h1 class="text-4xl md:text-6xl font-bold mt-4 mb-6">Where Ideas Meet Opportunity</h1>
-                    <p class="text-on-surface-variant text-lg leading-relaxed">It only takes a spark to start something extraordinary, and every great idea deserves the chance to become impact.</p>
+                
+                <!-- UPCOMING EVENTS SECTION -->
+                <div class="mb-16">
+                    <h2 class="font-heading text-3xl font-bold mb-8 pb-4 border-b border-surface-variant dark:border-[#374151]">Upcoming Events</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                        
+                        <!-- Event Card 1 -->
+                        <article id="startup-conclave" class="event-card rounded-2xl border border-surface-variant bg-white dark:bg-[#1f2937] p-8 shadow-sm hover:shadow-lg transition duration-300">
+                            <!-- Category Badges -->
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full dark:bg-[#ffb3b6] dark:text-primary">Featured</span>
+                                <span class="bg-secondary-container text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full dark:bg-[#835400] dark:text-white">Startup</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold mb-3">Startup Conclave'26</h3>
+                            <p class="text-on-surface-variant dark:text-gray-300 leading-relaxed mb-6">
+                                An event where ambitious founders connect, opportunities unfold, and possibilities grow.
+                            </p>
+                            
+                            <!-- Expandable Details section -->
+                            <details class="bg-surface-container dark:bg-[#17212b] border border-surface-variant dark:border-[#374151] rounded-lg overflow-hidden group">
+                                <summary class="cursor-pointer p-4 font-bold text-primary dark:text-[#ffb956] text-xs uppercase tracking-wider flex justify-between items-center list-none custom-summary">
+                                    View Details
+                                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="p-4 border-t border-surface-variant dark:border-[#374151] text-sm text-on-surface dark:text-gray-200 leading-relaxed space-y-2">
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Date:</strong> Details to be announced</p>
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Venue:</strong> AKGEC IDEA Lab Campus</p>
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Highlights:</strong> Entrepreneurship networking, startup pitches, and founder connections.</p>
+                                </div>
+                            </details>
+                        </article>
+                        
+                        <!-- Event Card 2 -->
+                        <article id="smart-india-hackathon" class="event-card rounded-2xl border border-surface-variant bg-white dark:bg-[#1f2937] p-8 shadow-sm hover:shadow-lg transition duration-300">
+                            <!-- Category Badges -->
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full dark:bg-[#ffb3b6] dark:text-primary">Upcoming</span>
+                                <span class="bg-secondary-container text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full dark:bg-[#835400] dark:text-white">Hackathon</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold mb-3">Internal Smart India Hackathon'26</h3>
+                            <p class="text-on-surface-variant dark:text-gray-300 leading-relaxed mb-6">
+                                Where young innovators unite, collaborate, and change the world while developing technology-driven solutions for sustainability.
+                            </p>
+                            
+                            <!-- Expandable Details section using basic HTML5 -->
+                            <details class="bg-surface-container dark:bg-[#17212b] border border-surface-variant dark:border-[#374151] rounded-lg overflow-hidden group">
+                                <summary class="cursor-pointer p-4 font-bold text-primary dark:text-[#ffb956] text-xs uppercase tracking-wider flex justify-between items-center list-none custom-summary">
+                                    View Details
+                                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="p-4 border-t border-surface-variant dark:border-[#374151] text-sm text-on-surface dark:text-gray-200 leading-relaxed space-y-2">
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Date:</strong> 03 September</p>
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Objective:</strong> Innovate for Sustainability</p>
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Status:</strong> Registration currently open</p>
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Organizing Body:</strong> AKGEC IDEA Lab</p>
+                                </div>
+                            </details>
+                        </article>
+
+
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <article id="startup-conclave" class="event-card rounded-2xl border border-surface-variant bg-white p-8 hover:bg-surface-container-lowest transition">
-                        <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">groups</span>
-                        <h2 class="text-2xl font-bold mt-6 mb-3">Startup Conclave</h2>
-                        <p class="text-on-surface-variant leading-relaxed mb-6">An event where ambitious founders connect, opportunities unfold, and possibilities grow.</p>
-                        <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">Entrepreneurship &bull; Networking &bull; Startups</span>
-                        <p class="text-on-surface-variant text-xs mt-6">Official registration details will be published here when available.</p>
-                    </article>
+                <!-- ACTIVITIES & WORKSHOPS SECTION -->
+                <div>
+                    <h2 class="font-heading text-3xl font-bold mb-8 pb-4 border-b border-surface-variant dark:border-[#374151]">Activities & Workshops</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        
+                        <!-- Event Card 3 -->
+                        <article id="ipr-workshop" class="event-card rounded-2xl border border-surface-variant bg-white dark:bg-[#1f2937] p-8 shadow-sm hover:shadow-lg transition duration-300">
+                            <!-- Category Badges -->
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="bg-[#e4e2e0] text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full dark:bg-[#374151] dark:text-white">Year Round</span>
+                                <span class="bg-secondary-container text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full dark:bg-[#835400] dark:text-white">IPR</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold mb-3">IPR Workshop Series</h3>
+                            <p class="text-on-surface-variant dark:text-gray-300 leading-relaxed mb-6">
+                                From idea to invention to ownership, understand the journey of protecting innovation. Guiding innovators in commercialising their intellectual property.
+                            </p>
+                            
+                            <details class="bg-surface-container dark:bg-[#17212b] border border-surface-variant dark:border-[#374151] rounded-lg overflow-hidden group">
+                                <summary class="cursor-pointer p-4 font-bold text-primary dark:text-[#ffb956] text-xs uppercase tracking-wider flex justify-between items-center list-none custom-summary">
+                                    View Details
+                                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="p-4 border-t border-surface-variant dark:border-[#374151] text-sm text-on-surface dark:text-gray-200 leading-relaxed space-y-2">
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Date:</strong> Ongoing Series</p>
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Focus:</strong> Patent Guidance, Copyrights, Trademarks.</p>
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Outcome:</strong> Basic foundational knowledge on IP protection and filing.</p>
+                                </div>
+                            </details>
+                        </article>
 
-                    <article id="smart-india-hackathon" class="event-card rounded-2xl border border-surface-variant bg-white p-8 hover:bg-surface-container-lowest transition">
-                        <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">code</span>
-                        <h2 class="text-2xl font-bold mt-6 mb-3">Smart India Hackathon</h2>
-                        <p class="text-on-surface-variant leading-relaxed mb-6">Where young innovators unite, collaborate, and change the world through technology-driven solutions.</p>
-                        <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">Innovation &bull; Collaboration &bull; Impact</span>
-                        <p class="text-on-surface-variant text-xs mt-6">Official registration details will be published here when available.</p>
-                    </article>
+                        <!-- Event Card 4 -->
+                        <article id="innovation-activities" class="event-card rounded-2xl border border-surface-variant bg-white dark:bg-[#1f2937] p-8 shadow-sm hover:shadow-lg transition duration-300">
+                            <!-- Category Badges -->
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="bg-[#e4e2e0] text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full dark:bg-[#374151] dark:text-white">Student Activity</span>
+                                <span class="bg-secondary-container text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full dark:bg-[#835400] dark:text-white">Innovation</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold mb-3">Innovation & Entrepreneurship Activities</h3>
+                            <p class="text-on-surface-variant dark:text-gray-300 leading-relaxed mb-6">
+                                Ideation activities, bootcamps, startup pitches, mentoring sessions, and student-led initiatives.
+                            </p>
+                            
+                            <details class="bg-surface-container dark:bg-[#17212b] border border-surface-variant dark:border-[#374151] rounded-lg overflow-hidden group">
+                                <summary class="cursor-pointer p-4 font-bold text-primary dark:text-[#ffb956] text-xs uppercase tracking-wider flex justify-between items-center list-none custom-summary">
+                                    View Details
+                                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="p-4 border-t border-surface-variant dark:border-[#374151] text-sm text-on-surface dark:text-gray-200 leading-relaxed space-y-2">
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Organized By:</strong> Entrepreneurship Cell & IIC</p>
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Activities:</strong> Founder Mentorship, Workshops, Idea validation.</p>
+                                    <p><strong class="text-primary dark:text-[#ffddb5]">Eligibility:</strong> Open to all AKGEC students and aspiring founders.</p>
+                                </div>
+                            </details>
+                        </article>
 
-                    <article class="rounded-2xl border border-surface-variant bg-white p-8 hover:bg-surface-container-lowest transition">
-                        <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">gavel</span>
-                        <h2 class="text-2xl font-bold mt-6 mb-3">IPR Workshop</h2>
-                        <p class="text-on-surface-variant leading-relaxed mb-6">From idea to invention to ownership, understand the journey of protecting innovation.</p>
-                        <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">Patents &bull; Copyright &bull; IP</span>
-                    </article>
-
-                    <article class="rounded-2xl border border-surface-variant bg-white p-8 hover:bg-surface-container-lowest transition">
-                        <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">lightbulb</span>
-                        <h2 class="text-2xl font-bold mt-6 mb-3">Innovation &amp; Entrepreneurship Activities</h2>
-                        <p class="text-on-surface-variant leading-relaxed mb-6">Ideation activities, bootcamps, hackathons, workshops, mentoring sessions, and student-led initiatives.</p>
-                        <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">Year Round &bull; Student Activities</span>
-                    </article>
+                    </div>
                 </div>
+
             </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer id="contact" class="bg-[#861f2d] text-white border-t border-white/10">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop footer-compact-container">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-5 footer-compact-grid">
@@ -454,8 +412,18 @@
     </footer>
 
     <script>
+        // Mobile Menu Logic
         const mobileMenuButton = document.getElementById("mobileMenuButton");
         const mobileMenu = document.getElementById("mobileMenu");
+        
+        mobileMenuButton.addEventListener("click", () => {
+            const isOpen = mobileMenu.classList.toggle("is-open");
+            mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+            mobileMenuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+            mobileMenuButton.querySelector(".material-symbols-outlined").textContent = isOpen ? "close" : "menu";
+        });
+
+        // Theme Toggle Logic
         const themeToggle = document.getElementById("themeToggle");
         const themeToggleMobile = document.getElementById("themeToggleMobile");
 
@@ -481,13 +449,6 @@
                 updateTheme(isDark);
                 localStorage.setItem("idea-lab-theme", isDark ? "dark" : "light");
             });
-        });
-
-        mobileMenuButton.addEventListener("click", () => {
-            const isOpen = mobileMenu.classList.toggle("is-open");
-            mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
-            mobileMenuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
-            mobileMenuButton.querySelector(".material-symbols-outlined").textContent = isOpen ? "close" : "menu";
         });
     </script>
 </body>
